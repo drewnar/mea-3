@@ -1,6 +1,6 @@
 setTimeout(function () {
   document.getElementById('preloader').remove();
-},1000)
+},7000)
 
 Fancybox.bind('.module-gallery a', {
   animated: false,
