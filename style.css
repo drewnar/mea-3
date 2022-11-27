@@ -964,7 +964,7 @@ input[type="checkbox"]:checked + .module-form-checkboxes-w-images__item-img{
     }
     .main-screen__text {
         margin: 30px 0 0 0;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 26px;
     }
     .nav__link {
