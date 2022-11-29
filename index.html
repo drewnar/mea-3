@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mea</title>
+  <link rel="icon" href="images/favicon.jpg">
+  <link rel="stylesheet" href="js/fancybox.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/jquery-3.6.1.min.js" defer></script>
+  <script src="js/fancybox.umd.js" defer></script>
+  <script src="js/custom.js" defer></script>
+
+  <script type="text/javascript">
+    function chkAUFGELEGT() {
+      if(document.aufgelegt.AUFGELEGT_Name.value == "")  {
+        alert("Bitte Ihren Namen eingeben!");
+        document.aufgelegt.AUFGELEGT_Name.focus();
+        return false;
+      }
+      if(document.aufgelegt.AUFGELEGT_PLZOrt.value == "") {
+        alert("Bitte Ihre PLZ und Ort eingeben!");
+        document.aufgelegt.AUFGELEGT_PLZOrt.focus();
+        return false;
+      }
+
+      return true;
+    }
+
+    function chkEINGELEGT() {
+      if(document.eingelegt.EINGELEGT_Name.value == "")  {
+        alert("Bitte Ihren Namen eingeben!");
+        document.eingelegt.EINGELEGT_Name.focus();
+        return false;
+      }
+      if(document.eingelegt.EINGELEGT_PLZOrt.value == "") {
+        alert("Bitte Ihre PLZ und Ort eingeben!");
+        document.eingelegt.EINGELEGT_PLZOrt.focus();
+        return false;
+      }      
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+<div id="preloader">
+  <div class="preloader__inner">
+    <div><span></span><span></span><span></span></div>
+    <p>Inhalte werden geladen...</p>
+  </div>
+</div>
+<div class="wrapper">
+
+  <div id="index"><img src="images/Main_bg.jpg" alt="text"></div>
+
+  <div class="header">
+    <div class="header__inner">
+      <div class="header__right">
+        <img src="images/LOGO.png" class="logo" alt="mea">
+        <div class="header-menu">
+          <div class="header-menu__inner">
+            <a href="#" class="header-menu__link header-menu__link-back">ZUR STARTSEITE</a>
+            <a href="#" class="header-menu__link header-menu__link-pdf">PRODUKTKATALOG-PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal module-pdf main-pdf">
+    <div class="modal__close modal__close-main"><img src="images/close_red.png" alt="x"></div>
+    <iframe
+        src="https://data-widgets.jotform.io/pdfEmbed/?url=https://uploads-ssl.webflow.com/6322f0cc39f09a2804d893d4/6335bb38d64a2d4382596819_MEA-Brosch%C3%BCre_Logistik_2022_V05_compressed.pdf"
+        frameborder="0" width="100%" height="100%"></iframe>
+  </div>
+  <div class="nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#meamodule" class="nav__link"><span>MEAMODUL</span></a></li>
+      <li class="nav__item"><a href="#REGALROSTE_Eingelegt" class="nav__link"><span>REGALROSTE<br>Eingelegt</span></a>
+      </li>
+      <li class="nav__item"><a href="#Aufgelegte_Regalroste" class="nav__link"><span>REGALROSTE<br>Aufgelegt</span></a>
+      </li>
+      <li class="nav__item"><a href="#MEASTEP_Treppenbausatz"
+                               class="nav__link"><span>MEASTEP<br>Treppenbausatz</span></a></li>
+      <li class="nav__item"><a href="#MEADIENSTLEISTUNGEN" class="nav__link"><span>MEA<br>Dienstleistungen</span></a>
+      </li>
+    </ul>
+  </div>
+  <div class="main-screen">
+    <div class="main-screen__block">
+      <div class="main-screen__container">
+        <div class="main-screen__content">
+          <h1 class="main-screen__title">MEA Metal Applications</h1>
+          <p class="main-screen__subtitle">ist ihr Spezialist für Norm-, Sonder- und Regalroste sowie Schiebebeschläge.</p>
+          <p class="main-screen__text">Seit unserer Gründung 1886 arbeiten wir Hand in Hand mit Profis verschiedenster
+            Branchen und Bereichen. Ihre branchenspezifischen Anforderungen kennen wir und haben uns über mehrere Jahre
+            hinweg ein fundiertes Praxiswissen angeeignet. Mit diesem Know-How haben wir eine Basis geschaffen, auf die
+            wir aufbauen können und unsere Produkte und Systemlösungen stetig weiterentwickeln können. Unseren Ideen und
+            Innovationen sind keine Grenzen gesetzt.</p>
+        </div>
+        <a href="#" class="main-screen__btn">
+          <div class="main-screen__btn__text">ENTDECKEN SIE <br>JETZT UNSER <br>REGALROSTSORTIMENT</div>
+          <img src="images/finger_1finger.png" alt="text" class="main-screen__btn-img">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="videos">
+    <video preload="auto" webkit-playsinline>
+      <source src="videos/L_100.mp4" type="video/mp4">
+    </video>
+    <video preload="auto" webkit-playsinline>
+      <source src="videos/L_200.mp4" type="video/mp4">
+    </video>
+    <video preload="auto" webkit-playsinline>
+      <source src="videos/L_300.mp4" type="video/mp4">
+    </video>
+    <video preload="auto" webkit-playsinline>
+      <source src="videos/L_400.mp4" type="video/mp4">
+    </video>
+    <video preload="auto" webkit-playsinline>
+      <source src="videos/L_500.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="videos-reverse">
+    <video preload="auto" webkit-playsinline>
+      <source src="videos/L_100_rev.mp4" type="video/mp4">
+    </video>
+    <video preload="auto" webkit-playsinline>
+      <source src="videos/L_200_rev.mp4" type="video/mp4">
+    </video>
+    <video preload="auto" webkit-playsinline>
+      <source src="videos/L_300_rev.mp4" type="video/mp4">
+    </video>
+    <video preload="auto" webkit-playsinline>
+      <source src="videos/L_400_rev.mp4" type="video/mp4">
+    </video>
+    <video preload="auto" webkit-playsinline>
+      <source src="videos/L_500_rev.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="modules">
+    <section class="module" id="meamodule">
+      <div class="module__wrapper">
+        <div class="module__inner">
+          <div class="module__card">
+            <h2 class="module__title">MEAMODUL - Sicher, funktional & zeitsparend</h2>
+            <div class="module__text">
+              <div class="module__text-block">Das MEAMODUL gilt als überaus patentes Leichtgewicht, welches speziell für
+                den
+                robusten Einsatz als Regalboden in der Industrie konstruiert wurde. So genial das MEAMODUL ist, so
+                einfach
+                ist seine Nutzung. Erhöhte Füllstäbe erleichtern das Ein- und Auslagern von Waren in das Regalfach.
+                Weniger
+                Widerstand in Lagerungsrichtung bedeuten weniger Kraftaufwand beim Umgang mit Kartons. Auch Paletten und
+                ähnliche Ladegüter werden beim Picking-Prozess dadurch geschützt. Mit dem MEAMODUL muss sich niemand
+                mehr
+                Gedanken darüber machen, wie Euro- und Halbpaletten im Regalfach gelagert werden sollen. Mit dem
+                MEAMODUL
+                investieren Sie im Bereich Logistik und Lagerhaltung langfristig in den Erfolg Ihres Unternehmens.
+              </div>
+              <div class="module__text-block"><strong>VORTEILE:</strong><br>
+                > Integrierte Verschiebesicherung<br>
+                > Lagergut wird beim Picking geschützt> Leichte Montage<br>
+                > Ladungsträger können variabel eingelagert werden<br>
+                > Für zahlreiche Lastfälle perfekt geeignet: u.a. Europaletten, Industriepaletten, Halbpaletten,
+                Kufenpaletten, Einwegpaletten
+              </div>
+            </div>
+            <div class="module-gallery">
+              <a data-fancybox="gallery-1" data-src="images/meamodule/gallery/Module_1.jpg"
+                 class="module-gallery__item"><img src="images/meamodule/M_1-p-500.jpg" alt="text"></a>
+              <a data-fancybox="gallery-1" data-src="images/meamodule/gallery/Module_2.jpg"
+                 class="module-gallery__item"><img src="images/meamodule/M_2-p-500.jpg" alt="text"></a>
+              <a data-fancybox="gallery-1" data-src="images/meamodule/gallery/Module_3.jpg"
+                 class="module-gallery__item"><img src="images/meamodule/M_3-p-500.jpg" alt="text"></a>
+            </div>
+            <div style="display: none;">
+              <div data-fancybox="gallery-1" data-src="images/meamodule/gallery/Module_4.jpg"></div>
+              <div data-fancybox="gallery-1" data-src="images/meamodule/gallery/Module_5.jpg"></div>
+            </div>
+          </div>
+          <div class="module__actions">
+            <a href="#module-pdf" class="module-action module__actions-item js-modal-open">
+              <div class="module-action__title">Passendes Zubehör</div>
+              <div class="module-action__list">
+                <div>Traversenklammer</div>
+                <div>Hitzestaublech</div>
+                <div>Regalfachtrenner</div>
+              </div>
+            </a>
+            <a href="#module-3d" class=" module-action-small module__actions-item  js-modal-open spline-modal">
+              <span class="module-action__img"><img src="images/360_1360.png" alt="360"></span>
+              <span class="module-action-small__text">Dieses Produkt rundherum entdecken</span>
+            </a>
+            <a href="#module-form" class="module-action-small module__actions-item js-modal-open">
+              <span class="module-action__img"><img src="images/mail_1mail.png" alt="form"></span>
+              <span class="module-action-small__text">Dieses Produkt jetzt anfragen</span>
+            </a>
+          </div>
+          <div class="module-nav">
+            <div class="module-nav__title"><span>MEAMODUL</span></div>
+            <a href="#" class="module-nav__back">ZURÜCK ZUR<br>PRODUKTÜBERSICHT</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal module-form">
+        <div class="modal__close js-modal-close"><img src="images/close.png" alt="x"></div>
+        <form action="" method="post" class="module-form__inner">
+          <div class="module-form__title">MEAMODUL</div>
+          <div class="module-form__description">Bitte senden Sie mir mehr Informationen</div>
+          <div class="module-form__form">
+            <div class="module-form__checkboxes">
+              <div class="module-form__checkbox module-form__checkbox-full">
+                <input type="checkbox" name="MEAMODUL" id="MEAMODUL" checked disabled>
+                <label for="MEAMODUL" class="module-checkbox">MEAMODUL</label>
+              </div>
+              <div class="module-form__checkbox">
+                <input type="checkbox" name="Traversenklammer" id="Traversenklammer">
+                <label for="Traversenklammer" class="module-checkbox">Traversenklammer</label>
+              </div>
+              <div class="module-form__checkbox">
+                <input type="checkbox" name="Hitzestaublech_1" id="Hitzestaublech-1">
+                <label for="Hitzestaublech-1" class="module-checkbox">Hitzestaublech</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="text" name="MEAMODUL-Firma" id="MEAMODUL-Firma" class="inp">
+                <label for="MEAMODUL-Firma" class="label">Firma</label>
+              </div>
+              <div class="module-form__field">
+                <input type="text" name="MEAMODUL-Name" id="MEAMODUL-Name" class="inp js-name">
+                <label for="MEAMODUL-Name" class="label">Name</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="text" name="MEAMODUL-Adresse" id="MEAMODUL-Adresse" class="inp">
+                <label for="MEAMODUL-Adresse" class="label">Adresse</label>
+              </div>
+              <div class="module-form__field">
+                <input type="text" name="MEAMODUL-PLZOrt" id="MEAMODUL-PLZOrt" class="inp js-plz">
+                <label for="MEAMODUL-PLZOrt" class="label">PLZ /Ort</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="tel" name="MEAMODUL-Telefon" id="MEAMODUL-Telefon" class="inp">
+                <label for="MEAMODUL-Telefon" class="label">Telefon</label>
+              </div>
+              <div class="module-form__field">
+                <input type="email" name="MEAMODUL-E-mail" id="MEAMODUL-E-mail" class="inp js-email">
+                <label for="MEAMODUL-E-mail" class="label">E-mail</label>
+              </div>
+            </div>
+            <div class="module-form-checkboxes-w-images">
+              <div class="module-form-checkboxes-w-images__title">Ich wünsche weiterhin Information zu:</div>
+              <div class="module-form-checkboxes-w-images__items">
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEA-TREPPENBAUSATZ">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/meamodule/form/L_2.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEA<br>TREPPENBAUSATZ</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="REGALROSTE-Eingelegt">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/meamodule/form/L-1.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">REGALROSTE<br>Eingelegt</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="REGALROSTE-Aufgelegt">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/meamodule/form/L_5.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">REGALROSTE<br>Aufgelegt</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEA-Dienstleistungen">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/meamodule/form/L_4.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEA<br>Dienstleistungen</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="module-form-submit" type="submit">Senden ></button>
+        </form>
+      </div>
+      <div class="modal module-3d">
+        <div class="modal__close js-modal-close spline-modal"><img src="images/close.png" alt="x"></div>
+        <div class="module-3d__inner">
+          <iframe src="https://my.spline.design/untitled-ab5a5c6f52c969321320e6e10bba12ab/" frameborder="0" width="100%"
+                  height="100%"></iframe>
+        </div>
+      </div>
+      <div class="modal module-pdf">
+        <div class="modal__close js-modal-close"><img src="images/close_red.png" alt="x"></div>
+        <iframe
+            src="https://data-widgets.jotform.io/pdfEmbed/?url=https://uploads-ssl.webflow.com/6322f0cc39f09a2804d893d4/6332bdebe41f7f8d3950f90c_PDF%20FOR%20ALL%20REGAL%20Zubehoer.pdf"
+            frameborder="0" width="100%" height="100%"></iframe>
+      </div>
+    </section>
+    <section class="module" id="REGALROSTE_Eingelegt">
+      <div class="module__wrapper">
+        <div class="module__inner">
+          <div class="module__card">
+            <h2 class="module__title">Eingelegte Regalroste - Vielfältig, sicher & flexibel</h2>
+            <div class="module__text">
+              <div class="module__text-block">Eingelegte Regalroste mit Einhängewinkel bestechen durch ihre geringe
+                Aufbauhöhe, wodurch die Höhe zwischen den einzelnen Regalfächern optimal genutzt werden kann. Die
+                Einhängewinkel dienen nicht nur zum Einlegen zwischen die Traversen, auch die Arretierung des Rostes
+                wird
+                dadurch sichergestellt.
+              </div>
+              <div class="module__text-block"><strong>VORTEILE:</strong><br>
+                > Geringe Aufbauhöhe bei Rosten mit Einhängewinkel<br>
+                > Hohe Tragkraft<br>
+                > Verschiebesicherung durch Einhängewinkel<br>
+                > Konfigurierbar für Punktlasten und jegliche Sonderfälle<br><br>
+                Passende Zubehörteile: MEA Regalbefestigungen, Hitzestaublech.
+              </div>
+            </div>
+            <div class="module-gallery">
+              <a data-fancybox="gallery-2" data-src="images/REGALROSTE_Eingelegt/gallery/F_Rega_1-min.jpg"
+                 class="module-gallery__item"><img src="images/REGALROSTE_Eingelegt/Regal_1_-p-500.jpg" alt="text"></a>
+              <a data-fancybox="gallery-2" data-src="images/REGALROSTE_Eingelegt/gallery/Rega_2.jpg"
+                 class="module-gallery__item"><img src="images/REGALROSTE_Eingelegt/Regal_2_-p-500.jpg" alt="text"></a>
+              <a data-fancybox="gallery-2" data-src="images/REGALROSTE_Eingelegt/gallery/Rega_3.jpg"
+                 class="module-gallery__item"><img src="images/REGALROSTE_Eingelegt/Regal_3_-p-500.jpg" alt="text"></a>
+            </div>
+            <div style="display: none;">
+              <div data-fancybox="gallery-2" data-src="images/meamodule/gallery/Module_4.jpg"></div>
+              <div data-fancybox="gallery-2" data-src="images/meamodule/gallery/Module_5.jpg"></div>
+            </div>
+          </div>
+          <div class="module__actions">
+            <a href="#module-pdf" class="module-action module__actions-item js-modal-open">
+              <div class="module-action__title">Passendes Zubehör</div>
+              <div class="module-action__list">
+                <div>Befestigungen</div>
+                <div>Hitzestaublech</div>
+                <div>Regalfachtrenner</div>
+              </div>
+            </a>
+            <a href="#module-3d" class=" module-action-small module__actions-item  js-modal-open spline-modal">
+              <span class="module-action__img"><img src="images/360_1360.png" alt="360"></span>
+              <span class="module-action-small__text">Dieses Produkt rundherum entdecken</span>
+            </a>
+            <a href="#module-form" class="module-action-small module__actions-item js-modal-open">
+              <span class="module-action__img"><img src="images/mail_1mail.png" alt="form"></span>
+              <span class="module-action-small__text">Dieses Produkt jetzt anfragen</span>
+            </a>
+          </div>
+          <div class="module-nav">
+            <div class="module-nav__title"><span>REGALROSTE<br>Eingelegt</span></div>
+            <a href="#" class="module-nav__back">ZURÜCK ZUR<br>PRODUKTÜBERSICHT</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal module-form">
+        <div class="modal__close js-modal-close"><img src="images/close.png" alt="x"></div>
+        <form name="eingelegt" action="" data-action="kontakt-eingelegt.php" method="post" class="module-form__inner" data-validate="chkEINGELEGT">
+          <div class="module-form__title">REGALROSTE EINGELEGT</div>
+          <div class="module-form__description">Bitte senden Sie mir mehr Informationen</div>
+          <div class="module-form__form">
+            <div class="module-form__checkboxes">
+              <div class="module-form__checkbox module-form__checkbox-full">
+                <input type="checkbox" name="EINGELEGT" id="EINGELEGT" checked disabled>
+                <label for="EINGELEGT" class="module-checkbox">REGALROSTE EINGELEGT</label>
+              </div>
+              <div class="module-form__checkbox">
+                <input type="checkbox" name="Hakenschraube" id="Hakenschraube-2">
+                <label for="Hakenschraube-2" class="module-checkbox">Hakenschraube</label>
+              </div>
+              <div class="module-form__checkbox">
+                <input type="checkbox" name="Hitzestaublech_1" id="Hitzestaublech-1a">
+                <label for="Hitzestaublech-1a" class="module-checkbox">Hitzestaublech</label>
+              </div>
+              <div class="module-form__checkbox">
+                <input type="checkbox" name="Regalfachtrenner" id="Regalfachtrenner-2">
+                <label for="Regalfachtrenner-2" class="module-checkbox">Regalfachtrenner</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="text" name="EINGELEGT_Firma" id="EINGELEGT-Firma" class="inp">
+                <label for="EINGELEGT-Firma" class="label">Firma</label>
+              </div>
+              <div class="module-form__field">
+                <input type="text" name="EINGELEGT_Name" id="EINGELEGT-Name" class="inp js-name">
+                <label for="EINGELEGT-Name" class="label">Name</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="text" name="EINGELEGT_Adresse" id="EINGELEGT-Adresse" class="inp">
+                <label for="EINGELEGT_-Adresse" class="label">Adresse</label>
+              </div>
+              <div class="module-form__field">
+                <input type="text" name="EINGELEGT_PLZOrt" id="EINGELEGT-PLZOrt" class="inp js-plz">
+                <label for="EINGELEGT-PLZOrt" class="label">PLZ /Ort</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="tel" name="EINGELEGT_Telefon" id="EINGELEGT-Telefon" class="inp">
+                <label for="EINGELEGT-Telefon" class="label">Telefon</label>
+              </div>
+              <div class="module-form__field">
+                <input type="email" name="EINGELEGT_Email" id="EINGELEGT-E-mail" class="inp js-email">
+                <label for="EINGELEGT-E-mail" class="label">E-mail</label>
+              </div>
+            </div>
+            <div class="module-form-checkboxes-w-images">
+              <div class="module-form-checkboxes-w-images__title">Ich wünsche weiterhin Information zu:</div>
+              <div class="module-form-checkboxes-w-images__items">
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEASTEP_Treppenbausatz">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/REGALROSTE_Eingelegt/form/L_2.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEASTEP <br>Treppenbausatz</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEAMODUL">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/REGALROSTE_Eingelegt/form/L_3.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEAMODUL</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="REGALROSTE_Aufgelegt_1">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/REGALROSTE_Eingelegt/form/L_5.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">REGALROSTE<br>Aufgelegt</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEA_Dienstleistungen">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/meamodule/form/L_4.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEA<br>Dienstleistungen</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="module-form-submit" type="submit">Senden ></button>
+        </form>
+      </div>
+      <div class="modal module-3d">
+        <div class="modal__close js-modal-close spline-modal"><img src="images/close.png" alt="x"></div>
+        <div class="module-3d__inner">
+          <iframe src='https://my.spline.design/l3copy-66b14f02b9411d706e7e1cd574071547/' frameborder='0' width='100%'
+                  height='100%'></iframe>
+        </div>
+      </div>
+      <div class="modal module-pdf">
+        <div class="modal__close js-modal-close"><img src="images/close_red.png" alt="x"></div>
+        <iframe
+            src="https://data-widgets.jotform.io/pdfEmbed/?url=https://uploads-ssl.webflow.com/6322f0cc39f09a2804d893d4/6332bdebe41f7f8d3950f90c_PDF%20FOR%20ALL%20REGAL%20Zubehoer.pdf"
+            frameborder="0" width="100%" height="100%"></iframe>
+      </div>
+    </section>
+    <section class="module" id="Aufgelegte_Regalroste">
+      <div class="module__wrapper">
+        <div class="module__inner">
+          <div class="module__card">
+            <h2 class="module__title">Aufgelegte Regalroste - Flexibel, sicher & funktional</h2>
+            <div class="module__text">
+              <div class="module__text-block">Ein Pluspunkt auf ganzer Linie: Der aufgelegte Regalrost ist flexibel für
+                verschiedenste Regal- bzw. Traversenbreiten anwendbar, die erhöhte Randeinfassung sichert den Rost vor
+                dem
+                ungewollten Verschieben. Auch ohne den Einsatz weiterer Zubehörteile.
+              </div>
+              <div class="module__text-block"><strong>VORTEILE:</strong><br>
+                ‍> Mit erhöhter Randeinfassung nach unten parallel den Füllstabseiten als Verschiebesicherung<br>
+                > Sprinklertauglich, da der Rost über den Traversen aufliegt<br>
+                > Flexibel bezüglich unterschiedlicher Traversenbreite<br><br>
+                Passende Zubehörteile: MEA Regalbefestigungen, Hitzestaublech
+              </div>
+            </div>
+            <div class="module-gallery">
+              <a data-fancybox="gallery-3" data-src="images/Aufgelegte_Regalroste/gallery/auf_2.jpg"
+                 class="module-gallery__item"><img src="images/Aufgelegte_Regalroste/auf_1-p-500.jpg" alt="text"></a>
+              <a data-fancybox="gallery-3" data-src="images/Aufgelegte_Regalroste/gallery/auf_5.jpg"
+                 class="module-gallery__item"><img src="images/Aufgelegte_Regalroste/auf_6-p-500.jpg" alt="text"></a>
+              <a data-fancybox="gallery-3" data-src="images/Aufgelegte_Regalroste/gallery/auf_3.jpg"
+                 class="module-gallery__item"><img src="images/Aufgelegte_Regalroste/auf_4-p-500.jpg" alt="text"></a>
+            </div>
+          </div>
+          <div class="module__actions">
+            <a href="#module-pdf" class="module-action module__actions-item js-modal-open">
+              <div class="module-action__title">Passendes Zubehör</div>
+              <div class="module-action__list">
+                <div>Befestigungen</div>
+                <div>Hitzestaublech</div>
+                <div>Regalfachtrenner</div>
+              </div>
+            </a>
+            <a href="#module-3d" class=" module-action-small module__actions-item  js-modal-open spline-modal">
+              <span class="module-action__img"><img src="images/360_1360.png" alt="360"></span>
+              <span class="module-action-small__text">Dieses Produkt rundherum entdecken</span>
+            </a>
+            <a href="#module-form" class="module-action-small module__actions-item js-modal-open">
+              <span class="module-action__img"><img src="images/mail_1mail.png" alt="form"></span>
+              <span class="module-action-small__text">Dieses Produkt jetzt anfragen</span>
+            </a>
+          </div>
+          <div class="module-nav">
+            <div class="module-nav__title"><span>REGALROSTE<br>Aufgelegt</span></div>
+            <a href="#" class="module-nav__back">ZURÜCK ZUR<br>PRODUKTÜBERSICHT</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal module-form">
+        <div class="modal__close js-modal-close"><img src="images/close.png" alt="x"></div>
+        <form name="aufgelegt" action="" data-action="kontakt-aufgelegt.php" method="post" class="module-form__inner" data-validate="chkAUFGELEGT">
+          <div class="module-form__title">REGALROSTE AUFGELEGT</div>
+          <div class="module-form__description">Bitte senden Sie mir mehr Informationen</div>
+          <div class="module-form__form">
+            <div class="module-form__checkboxes">
+              <div class="module-form__checkbox module-form__checkbox-full">
+                <input type="checkbox" name="AUFGELEGT" id="AUFGELEGT" checked disabled>
+                <label for="AUFGELEGT" class="module-checkbox">REGALROSTE AUFGELEGT</label>
+              </div>
+              <div class="module-form__checkbox">
+                <input type="checkbox" name="Hakenschraube" id="Hakenschraube-2b">
+                <label for="Hakenschraube-2b" class="module-checkbox">Hakenschraube</label>
+              </div>
+              <div class="module-form__checkbox">
+                <input type="checkbox" name="Hitzestaublech_2" id="Hitzestaublech-2">
+                <label for="Hitzestaublech-2" class="module-checkbox">Hitzestaublech</label>
+              </div>
+              <div class="module-form__checkbox">
+                <input type="checkbox" name="Regalfachtrenner" id="Regalfachtrenner-2c">
+                <label for="Regalfachtrenner-2c" class="module-checkbox">Regalfachtrenner</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="text" name="AUFGELEGT_Firma" id="AUFGELEGT-Firma" class="inp">
+                <label for="AUFGELEGT-Firma" class="label">Firma</label>
+              </div>
+              <div class="module-form__field">
+                <input type="text" name="AUFGELEGT_Name" id="AUFGELEGT-Name" class="inp js-name">
+                <label for="AUFGELEGT-Name" class="label">Name</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="text" name="AUFGELEGT_Adresse" id="AUFGELEGT-Adresse" class="inp">
+                <label for="AUFGELEGT-Adresse" class="label">Adresse</label>
+              </div>
+              <div class="module-form__field">
+                <input type="text" name="AUFGELEGT_PLZOrt" id="AUFGELEGT-PLZOrt" class="inp js-plz">
+                <label for="AUFGELEGT-PLZOrt" class="label">PLZ /Ort</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="tel" name="AUFGELEGT_Telefon" id="AUFGELEGT-Telefon" class="inp">
+                <label for="AUFGELEGT-Telefon" class="label">Telefon</label>
+              </div>
+              <div class="module-form__field">
+                <input type="email" name="AUFGELEGT_Email" id="AUFGELEGT-E-mail" class="inp js-email">
+                <label for="AUFGELEGT-E-mail" class="label">E-mail</label>
+              </div>
+            </div>
+            <div class="module-form-checkboxes-w-images">
+              <div class="module-form-checkboxes-w-images__title">Ich wünsche weiterhin Information zu:</div>
+              <div class="module-form-checkboxes-w-images__items">
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEAMODUL" value="MEAMODUL">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/Aufgelegte_Regalroste/form/L_3.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEAMODUL</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="REGALROSTE_Eingelegt" value="Regalroste eingelegt">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/Aufgelegte_Regalroste/form/L-1.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">REGALROSTE<br>Eingelegt</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEASTEP_Treppenbausatz"  value="MEASTEP_Treppenbausatz">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/Aufgelegte_Regalroste/form/L_2.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEASTEP<br>Treppenbausatz</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEA_Dienstleistungen" value="MEA Dienstleistungen">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/Aufgelegte_Regalroste/form/L_4.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEA<br>Dienstleistungen</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="module-form-submit" type="submit">Senden ></button>
+        </form>
+      </div>
+      <div class="modal module-3d">
+        <div class="modal__close js-modal-close spline-modal"><img src="images/close.png" alt="x"></div>
+        <div class="module-3d__inner">
+          <iframe src='https://my.spline.design/untitled-cdba49fbeafceb728e5d1bb9d53d5746/' frameborder='0' width='100%'
+                  height='100%'></iframe>
+        </div>
+      </div>
+      <div class="modal module-pdf">
+        <div class="modal__close js-modal-close"><img src="images/close_red.png" alt="x"></div>
+        <iframe
+            src="https://data-widgets.jotform.io/pdfEmbed/?url=https://uploads-ssl.webflow.com/6322f0cc39f09a2804d893d4/6332bdebe41f7f8d3950f90c_PDF%20FOR%20ALL%20REGAL%20Zubehoer.pdf"
+            frameborder="0" width="100%" height="100%"></iframe>
+      </div>
+    </section>
+    <section class="module" id="MEASTEP_Treppenbausatz">
+      <div class="module__wrapper">
+        <div class="module__inner">
+          <div class="module__card">
+            <h2 class="module__title">MEASTEP Treppenbausatz</h2>
+            <div class="module__text">
+              <div class="module__text-block">Der Treppenbausatz MEASTEP ist eine Innovation, die Ihnen das Leben in
+                vielerlei Hinsicht einfacher macht.<br>
+                Die stabile Treppe mit geteilten Stahlwangen kann unkompliziert im LKW transportiert werden und ist vor
+                Ort ohne Bohren und Nacharbeiten schnell und sicher aufgebaut. Sie ist zum Beispiel in Lagerhallen als
+                Zugang zu Lagerbühnen bestens geeignet. Die Treppe ist witterungsbeständig, standsicher und wird mit den
+                bewährten MEASTEP XSL Stufen geliefert. Je nach Bausatz können Höhen bis 5,98 Meter überwunden werden.
+                Der
+                Neigungswinkel ist variabel von 35 bis 55 Grad.
+              </div>
+              <div class="module__text-block">Das besondere an den Stufen MEASTEP XSL - sie verbinden geringes Gewicht
+                mit Sicherheit und Stabilität.<br>
+                Durch die besondere Konzeption und Anordnung der Tragstäbe entsteht nicht nur eine hohe Stabilität, es
+                entsteht auch ein
+                einheitliches Maschenbild.<br>Ein weiterer Vorteil ist die Anordnung der Füllstäbe quer zur Gehrichtung.<br><br>
+                Die MEASTEP XSL Stufen sind auch einzeln mit einer
+                freitragenden Stützweite von bis zu 4200 mm konzipierbar.
+              </div>
+            </div>
+            <div class="module-gallery">
+              <a data-fancybox="gallery-4" data-src="images/MEASTEP_Treppenbausatz/gallery/mia_step_2.jpg"
+                 class="module-gallery__item"><img src="images/MEASTEP_Treppenbausatz/mia_step_2_-p-500.jpg" alt="text"></a>
+              <a data-fancybox="gallery-4" data-src="images/MEASTEP_Treppenbausatz/gallery/mia_step_1.jpg"
+                 class="module-gallery__item"><img src="images/MEASTEP_Treppenbausatz/mia_step_1_-p-500.jpg" alt="text"></a>
+              <a data-fancybox="gallery-4" data-src="images/MEASTEP_Treppenbausatz/gallery/mia_step_3.jpg"
+                 class="module-gallery__item"><img src="images/MEASTEP_Treppenbausatz/mia_step_3_-p-500.jpg" alt="text"></a>
+            </div>
+          </div>
+          <div class="module__actions">
+            <a href="#module-pdf" class="module-action module__actions-item js-modal-open">
+              <div class="module-action__title">Passendes Zubehör</div>
+              <div class="module-action__media">
+                <img src="images/MEASTEP_Treppenbausatz/st_image_1.png" alt="text">
+              </div>
+              <div class="module-action__text">
+                MEAFLOOR - <strong>für noch mehr Komfort und Sicherheit</strong>
+              </div>
+            </a>
+            <a href="#module-3d" class=" module-action-small module__actions-item  js-modal-open spline-modal">
+              <span class="module-action__img"><img src="images/360_1360.png" alt="360"></span>
+              <span class="module-action-small__text">Dieses Produkt rundherum entdecken</span>
+            </a>
+            <a href="#module-form" class="module-action-small module__actions-item js-modal-open">
+              <span class="module-action__img"><img src="images/mail_1mail.png" alt="form"></span>
+              <span class="module-action-small__text">Dieses Produkt jetzt anfragen</span>
+            </a>
+          </div>
+          <div class="module-nav">
+            <div class="module-nav__title"><span>MEASTEP<br>Treppenbausatz</span></div>
+            <a href="#" class="module-nav__back">ZURÜCK ZUR<br>PRODUKTÜBERSICHT</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal module-form">
+        <div class="modal__close js-modal-close"><img src="images/close.png" alt="x"></div>
+        <form action="" method="post" class="module-form__inner">
+          <div class="module-form__title">MEASTEP Treppenbausatz</div>
+          <div class="module-form__description">Bitte senden Sie mir mehr Informationen</div>
+          <div class="module-form__form">
+            <div class="module-form__checkboxes">
+              <div class="module-form__checkbox module-form__checkbox-full">
+                <input type="checkbox" name="MEASTEP_Treppenbausatz" id="MEASTEP_Treppenbausatz-1" checked disabled>
+                <label for="MEASTEP_Treppenbausatz-1" class="module-checkbox">MEASTEP Treppenbausatz</label>
+              </div>
+              <div class="module-form__checkbox">
+                <input type="checkbox" name="MEAFLOOR" id="MEAFLOOR">
+                <label for="MEAFLOOR" class="module-checkbox">MEAFLOOR</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="text" name="MEASTEP_Treppenbausatz-Firma" id="MEASTEP_Treppenbausatz-Firma" class="inp">
+                <label for="MEASTEP_Treppenbausatz-Firma" class="label">Firma</label>
+              </div>
+              <div class="module-form__field">
+                <input type="text" name="MEASTEP_Treppenbausatz-Name" id="MEASTEP_Treppenbausatz-Name" class="inp js-name">
+                <label for="MEASTEP_Treppenbausatz-Name" class="label">Name</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="text" name="MEASTEP_Treppenbausatz-Adresse" id="MEASTEP_Treppenbausatz-Adresse"
+                       class="inp">
+                <label for="MEASTEP_Treppenbausatz-Adresse" class="label">Adresse</label>
+              </div>
+              <div class="module-form__field">
+                <input type="text" name="MEASTEP_Treppenbausatz-PLZOrt" id="MEASTEP_Treppenbausatz-PLZOrt" class="inp js-plz">
+                <label for="MEASTEP_Treppenbausatz-PLZOrt" class="label">PLZ /Ort</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="tel" name="MEASTEP_Treppenbausatz-Telefon" id="MEASTEP_Treppenbausatz-Telefon" class="inp">
+                <label for="MEASTEP_Treppenbausatz-Telefon" class="label">Telefon</label>
+              </div>
+              <div class="module-form__field">
+                <input type="email" name="MEASTEP_Treppenbausatz-E-mail" id="MEASTEP_Treppenbausatz-E-mail" class="inp js-email">
+                <label for="MEASTEP_Treppenbausatz-E-mail" class="label">E-mail</label>
+              </div>
+            </div>
+            <div class="module-form-checkboxes-w-images">
+              <div class="module-form-checkboxes-w-images__title">Ich wünsche weiterhin Information zu:</div>
+              <div class="module-form-checkboxes-w-images__items">
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEAMODUL">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/MEASTEP_Treppenbausatz/form/L_3.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEAMODUL</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="REGALROSTE_Eingelegt">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/MEASTEP_Treppenbausatz/form/L-1.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">REGALROSTE<br>Eingelegt</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEASTEP_Treppenbausatz">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/MEASTEP_Treppenbausatz/form/L_5.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">REGALROSTE<br>Aufgelegt</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEA-Dienstleistungen">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/MEASTEP_Treppenbausatz/form/L_4.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEA<br>Dienstleistungen</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="module-form-submit" type="submit">Senden ></button>
+        </form>
+      </div>
+      <div class="modal module-3d">
+        <div class="modal__close js-modal-close spline-modal"><img src="images/close.png" alt="x"></div>
+        <div class="module-3d__inner">
+          <iframe src='https://my.spline.design/untitled-b4354d8852455596888ef18b183279a5/' frameborder='0' width='100%'
+                  height='100%'></iframe>
+        </div>
+      </div>
+      <div class="modal module-pdf">
+        <div class="modal__close js-modal-close"><img src="images/close_red.png" alt="x"></div>
+        <iframe
+            src="https://uploads-ssl.webflow.com/6322f0cc39f09a2804d893d4/633219fcce3f6dd371f8ac04_PDF%20FOR%20Meafloor.pdf"
+            frameborder="0" width="100%" height="100%"></iframe>
+      </div>
+    </section>
+    <section class="module" id="MEADIENSTLEISTUNGEN">
+      <div class="module__wrapper">
+        <div class="module__inner">
+          <div class="module__card">
+            <h2 class="module__title">MEA DIENSTLEISTUNGEN</h2>
+            <div class="module__placeholder-image">
+              <img src="images/MEADIENSTLEISTUNGEN/DIENSTLEISTUNGEN_2.png" alt="text">
+            </div>
+          </div>
+          <div class="module__actions">
+            <a href="#module-form" class="module-action-small module__actions-item js-modal-open">
+              <span class="module-action__img"><img src="images/mail_1mail.png" alt="form"></span>
+              <span class="module-action-small__text">Dieses Produkt jetzt anfragen</span>
+            </a>
+          </div>
+          <div class="module-nav">
+            <div class="module-nav__title"><span>MEA<br>Dienstleistungen</span></div>
+            <a href="#" class="module-nav__back">ZURÜCK ZUR<br>PRODUKTÜBERSICHT</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal module-form">
+        <div class="modal__close js-modal-close"><img src="images/close.png" alt="x"></div>
+        <form action="" method="post" class="module-form__inner">
+          <div class="module-form__title">MEADIENSTLEISTUNGEN</div>
+          <div class="module-form__description">Bitte senden Sie mir mehr Informationen</div>
+          <div class="module-form__form">
+            <div class="module-form__checkboxes">
+              <div class="module-form__checkbox module-form__checkbox-full">
+                <input type="checkbox" name="MEADIENSTLEISTUNGEN" id="MEADIENSTLEISTUNGEN-1" checked disabled>
+                <label for="MEADIENSTLEISTUNGEN-1" class="module-checkbox">MEADIENSTLEISTUNGEN</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="text" name="MEADIENSTLEISTUNGEN-Firma" id="MEADIENSTLEISTUNGEN-Firma" class="inp">
+                <label for="MEADIENSTLEISTUNGEN-Firma" class="label">Firma</label>
+              </div>
+              <div class="module-form__field">
+                <input type="text" name="MEADIENSTLEISTUNGEN-Name" id="MEADIENSTLEISTUNGEN-Name" class="inp js-name">
+                <label for="MEADIENSTLEISTUNGEN-Name" class="label">Name</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="text" name="MEADIENSTLEISTUNGEN-Adresse" id="MEADIENSTLEISTUNGEN-Adresse" class="inp">
+                <label for="MEADIENSTLEISTUNGEN-Adresse" class="label">Adresse</label>
+              </div>
+              <div class="module-form__field">
+                <input type="text" name="MEADIENSTLEISTUNGEN-PLZOrt" id="MEADIENSTLEISTUNGEN-PLZOrt" class="inp js-plz">
+                <label for="MEADIENSTLEISTUNGEN-PLZOrt" class="label">PLZ /Ort</label>
+              </div>
+            </div>
+            <div class="module-form__row">
+              <div class="module-form__field">
+                <input type="tel" name="MEADIENSTLEISTUNGEN-Telefon" id="MEADIENSTLEISTUNGEN-Telefon" class="inp">
+                <label for="MEADIENSTLEISTUNGEN-Telefon" class="label">Telefon</label>
+              </div>
+              <div class="module-form__field">
+                <input type="email" name="MEADIENSTLEISTUNGEN-E-mail" id="MEADIENSTLEISTUNGEN-E-mail" class="inp js-email">
+                <label for="MEADIENSTLEISTUNGEN-E-mail" class="label">E-mail</label>
+              </div>
+            </div>
+            <div class="module-form-checkboxes-w-images">
+              <div class="module-form-checkboxes-w-images__title">Ich wünsche weiterhin Information zu:</div>
+              <div class="module-form-checkboxes-w-images__items">
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEAMODUL">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/MEADIENSTLEISTUNGEN/form/L_3.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEAMODUL</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="REGALROSTE_Eingelegt">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/MEADIENSTLEISTUNGEN/form/L-1.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">REGALROSTE<br>Eingelegt</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEASTEP_Treppenbausatz">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/MEADIENSTLEISTUNGEN/form/L_5.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">REGALROSTE<br>Aufgelegt</span>
+                </label>
+                <label class="module-form-checkboxes-w-images__item">
+                  <input type="checkbox" name="MEA_Treppenbausatz">
+                  <span class="module-form-checkboxes-w-images__item-img">
+                  <img src="images/MEADIENSTLEISTUNGEN/form/L_2.jpg" alt="text">
+                </span>
+                  <span class="module-form-checkboxes-w-images__item-title">MEA<br>Treppenbausatz</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="module-form-submit" type="submit">Senden ></button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <div class="thanks">
+    <div class="thanks__inner">
+      <h3>Danke für Ihre Nachricht!</h3>
+      <hr>
+      <p>Wir melden uns schnellmöglich bei Ihnen.</p>
+      <p><strong>Ihre MEA Group</strong></p>
+      <a href="#" class="js-thanks">Zurück zur Produktseite</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
