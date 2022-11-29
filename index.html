@@ -14,9 +14,7 @@
   <script src="js/custom.js" defer></script>
 
   <script type="text/javascript">
-    <!--
-    function chkFormular()
-    {
+    function chkAUFGELEGT() {
       if(document.aufgelegt.AUFGELEGT_Name.value == "")  {
         alert("Bitte Ihren Namen eingeben!");
         document.aufgelegt.AUFGELEGT_Name.focus();
@@ -28,10 +26,24 @@
         return false;
       }
 
+      return true;
     }
-    //-->
-  </script>
 
+    function chkEINGELEGT() {
+      if(document.eingelegt.EINGELEGT_Name.value == "")  {
+        alert("Bitte Ihren Namen eingeben!");
+        document.eingelegt.EINGELEGT_Name.focus();
+        return false;
+      }
+      if(document.eingelegt.EINGELEGT_PLZOrt.value == "") {
+        alert("Bitte Ihre PLZ und Ort eingeben!");
+        document.eingelegt.EINGELEGT_PLZOrt.focus();
+        return false;
+      }      
+
+      return true;
+    }
+  </script>
 </head>
 <body>
 <div id="preloader">
@@ -210,8 +222,8 @@
                 <label for="Traversenklammer" class="module-checkbox">Traversenklammer</label>
               </div>
               <div class="module-form__checkbox">
-                <input type="checkbox" name="Hitzestaublech" id="Hitzestaublech">
-                <label for="Hitzestaublech" class="module-checkbox">Hitzestaublech</label>
+                <input type="checkbox" name="Hitzestaublech_1" id="Hitzestaublech-1">
+                <label for="Hitzestaublech-1" class="module-checkbox">Hitzestaublech</label>
               </div>
             </div>
             <div class="module-form__row">
@@ -354,7 +366,7 @@
       </div>
       <div class="modal module-form">
         <div class="modal__close js-modal-close"><img src="images/close.png" alt="x"></div>
-        <form action="" method="post" class="module-form__inner">
+        <form name="eingelegt" action="" data-action="kontakt-eingelegt.php" method="post" class="module-form__inner" data-validate="chkEINGELEGT">
           <div class="module-form__title">REGALROSTE EINGELEGT</div>
           <div class="module-form__description">Bitte senden Sie mir mehr Informationen</div>
           <div class="module-form__form">
@@ -364,45 +376,45 @@
                 <label for="EINGELEGT" class="module-checkbox">REGALROSTE EINGELEGT</label>
               </div>
               <div class="module-form__checkbox">
-                <input type="checkbox" name="Hakenschraube" id="Hakenschraube">
-                <label for="Hakenschraube" class="module-checkbox">Hakenschraube</label>
+                <input type="checkbox" name="Hakenschraube" id="Hakenschraube-2">
+                <label for="Hakenschraube-2" class="module-checkbox">Hakenschraube</label>
               </div>
               <div class="module-form__checkbox">
-                <input type="checkbox" name="Hitzestaublech-1" id="Hitzestaublech-1">
-                <label for="Hitzestaublech-1" class="module-checkbox">Hitzestaublech</label>
+                <input type="checkbox" name="Hitzestaublech_1" id="Hitzestaublech-1a">
+                <label for="Hitzestaublech-1a" class="module-checkbox">Hitzestaublech</label>
               </div>
               <div class="module-form__checkbox">
-                <input type="checkbox" name="Regalfachtrenner" id="Regalfachtrenner">
-                <label for="Regalfachtrenner" class="module-checkbox">Regalfachtrenner</label>
+                <input type="checkbox" name="Regalfachtrenner" id="Regalfachtrenner-2">
+                <label for="Regalfachtrenner-2" class="module-checkbox">Regalfachtrenner</label>
               </div>
             </div>
             <div class="module-form__row">
               <div class="module-form__field">
-                <input type="text" name="EINGELEGT-Firma" id="EINGELEGT-Firma" class="inp">
+                <input type="text" name="EINGELEGT_Firma" id="EINGELEGT-Firma" class="inp">
                 <label for="EINGELEGT-Firma" class="label">Firma</label>
               </div>
               <div class="module-form__field">
-                <input type="text" name="EINGELEGT-Name" id="EINGELEGT-Name" class="inp js-name">
+                <input type="text" name="EINGELEGT_Name" id="EINGELEGT-Name" class="inp js-name">
                 <label for="EINGELEGT-Name" class="label">Name</label>
               </div>
             </div>
             <div class="module-form__row">
               <div class="module-form__field">
-                <input type="text" name="EINGELEGT-Adresse" id="EINGELEGT-Adresse" class="inp">
-                <label for="EINGELEGT-Adresse" class="label">Adresse</label>
+                <input type="text" name="EINGELEGT_Adresse" id="EINGELEGT-Adresse" class="inp">
+                <label for="EINGELEGT_-Adresse" class="label">Adresse</label>
               </div>
               <div class="module-form__field">
-                <input type="text" name="EINGELEGT-PLZOrt" id="EINGELEGT-PLZOrt" class="inp js-plz">
+                <input type="text" name="EINGELEGT_PLZOrt" id="EINGELEGT-PLZOrt" class="inp js-plz">
                 <label for="EINGELEGT-PLZOrt" class="label">PLZ /Ort</label>
               </div>
             </div>
             <div class="module-form__row">
               <div class="module-form__field">
-                <input type="tel" name="EINGELEGT-Telefon" id="EINGELEGT-Telefon" class="inp">
+                <input type="tel" name="EINGELEGT_Telefon" id="EINGELEGT-Telefon" class="inp">
                 <label for="EINGELEGT-Telefon" class="label">Telefon</label>
               </div>
               <div class="module-form__field">
-                <input type="email" name="EINGELEGT-E-mail" id="EINGELEGT-E-mail" class="inp js-email">
+                <input type="email" name="EINGELEGT_Email" id="EINGELEGT-E-mail" class="inp js-email">
                 <label for="EINGELEGT-E-mail" class="label">E-mail</label>
               </div>
             </div>
@@ -410,7 +422,7 @@
               <div class="module-form-checkboxes-w-images__title">Ich wünsche weiterhin Information zu:</div>
               <div class="module-form-checkboxes-w-images__items">
                 <label class="module-form-checkboxes-w-images__item">
-                  <input type="checkbox" name="MEASTEP-Treppenbausatz">
+                  <input type="checkbox" name="MEASTEP_Treppenbausatz">
                   <span class="module-form-checkboxes-w-images__item-img">
                   <img src="images/REGALROSTE_Eingelegt/form/L_2.jpg" alt="text">
                 </span>
@@ -424,14 +436,14 @@
                   <span class="module-form-checkboxes-w-images__item-title">MEAMODUL</span>
                 </label>
                 <label class="module-form-checkboxes-w-images__item">
-                  <input type="checkbox" name="REGALROSTE-Aufgelegt-1">
+                  <input type="checkbox" name="REGALROSTE_Aufgelegt_1">
                   <span class="module-form-checkboxes-w-images__item-img">
                   <img src="images/REGALROSTE_Eingelegt/form/L_5.jpg" alt="text">
                 </span>
                   <span class="module-form-checkboxes-w-images__item-title">REGALROSTE<br>Aufgelegt</span>
                 </label>
                 <label class="module-form-checkboxes-w-images__item">
-                  <input type="checkbox" name="MEA-Dienstleistungen-1">
+                  <input type="checkbox" name="MEA_Dienstleistungen">
                   <span class="module-form-checkboxes-w-images__item-img">
                   <img src="images/meamodule/form/L_4.jpg" alt="text">
                 </span>
@@ -510,7 +522,7 @@
       </div>
       <div class="modal module-form">
         <div class="modal__close js-modal-close"><img src="images/close.png" alt="x"></div>
-        <form name="aufgelegt" action="kontakt.php" method="post" class="module-form__inner" onSubmit="return chkFormular()">
+        <form name="aufgelegt" action="" data-action="kontakt-aufgelegt.php" method="post" class="module-form__inner" data-validate="chkAUFGELEGT">
           <div class="module-form__title">REGALROSTE AUFGELEGT</div>
           <div class="module-form__description">Bitte senden Sie mir mehr Informationen</div>
           <div class="module-form__form">
@@ -520,16 +532,16 @@
                 <label for="AUFGELEGT" class="module-checkbox">REGALROSTE AUFGELEGT</label>
               </div>
               <div class="module-form__checkbox">
-                <input type="checkbox" name="Hakenschraube" id="Hakenschraube-2">
-                <label for="Hakenschraube-2" class="module-checkbox">Hakenschraube</label>
+                <input type="checkbox" name="Hakenschraube" id="Hakenschraube-2b">
+                <label for="Hakenschraube-2b" class="module-checkbox">Hakenschraube</label>
               </div>
               <div class="module-form__checkbox">
                 <input type="checkbox" name="Hitzestaublech_2" id="Hitzestaublech-2">
                 <label for="Hitzestaublech-2" class="module-checkbox">Hitzestaublech</label>
               </div>
               <div class="module-form__checkbox">
-                <input type="checkbox" name="Regalfachtrenner" id="Regalfachtrenner-2">
-                <label for="Regalfachtrenner-2" class="module-checkbox">Regalfachtrenner</label>
+                <input type="checkbox" name="Regalfachtrenner" id="Regalfachtrenner-2c">
+                <label for="Regalfachtrenner-2c" class="module-checkbox">Regalfachtrenner</label>
               </div>
             </div>
             <div class="module-form__row">
