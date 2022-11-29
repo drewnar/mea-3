@@ -54,7 +54,7 @@ $(document).ready(function () {
   $('.js-modal-open').click(function (e) {
     e.preventDefault();
     var modalName = "." + $(this).attr('href').substring(1);
-    $('.module__wrapper').css('display', 'none');
+    $('.module__wrapper').hide();
     $('.header').hide();
     if ($(this).hasClass('spline-modal')) {
       $(this).closest('.module').find(modalName).addClass('active');
@@ -64,7 +64,7 @@ $(document).ready(function () {
   });
   $('.js-modal-close').click(function () {
     $('.header').show();
-    $('.module__wrapper').css('display', 'flex');
+    $('.module__wrapper').show();
     if ($(this).hasClass('spline-modal')) {
       $(this).closest('.modal').removeClass('active');
     } else {
@@ -79,19 +79,26 @@ $(document).ready(function () {
     e.preventDefault();
     fTarget = $(this).closest('section').attr('id');
     var formTarget = $(this).closest('.module-form__inner');
+    var vlidateFunction = formTarget.data('validate');
     var name = formTarget.find('.js-name').val();
     var plz = formTarget.find('.js-plz').val();
     var email = formTarget.find('.js-email').val();
-    console.log(formTarget.serialize())
-    if (name === "" || plz === "" || email === ""){
-      alert('Fill the form fields')
-    }else{
+    var action = formTarget.data('action');
+    var isValid = true;
+
+    if(vlidateFunction) {
+      isValid = window[vlidateFunction]();
+    }else if (name === "" || plz === "" || email === "") {
+      alert('Fill the form fields');
+      isValid = false;
+    }
+
+    if(isValid){
       $.ajax({
         type: "POST",
-        url: 'kontakt.php',
+        url: action ? action : 'kontakt.php',
         data: formTarget.serialize(),
         success: function(data) {
-          console.log(data)
           if (data === 'sended'){
             $('.thanks').show();
             formTarget.get(0).reset();
@@ -99,6 +106,7 @@ $(document).ready(function () {
         }
       });
     }
+
   })
   $('.js-thanks').click(function (e) {
     e.preventDefault();
